@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "titre": "Apprentissage Continu",
+        "details": [
+            "Autodidacte",
+            "Formation Effets spéciaux",
+            "Formation technique cycles (VAE)",
+            "Matériel audiovisuel / pilotage drone",
+            "Formation OpenClassrooms"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    },
+    {
+        "id": 2,
+        "titre": "Versionning / Sauvegarde de données",
+        "details": [
+            "Pérennité Stockage + tri des rushs vidéos (Quantités énormes)",
+            "Versions de montages",
+            "Git/Github"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2
+        ],
+        "experiences_id": []
+    },
+    {
+        "id": 3,
+        "titre": "Travail en équipe",
+        "details": [
+            "Bicy'cool ; Chef d'atelier + équipe réduite",
+            "Ecoute/collaboration interne, transversale : avec autres services",
+            "Écoute/collaboration interne, verticale :(hierarchie) suivre et rendre compte",
+            "Tournages snowboard, avec Athlètes, photographes...",
+            "équipe média startup Hexo+ (grenoble)",
+            "Startup/TPE/PME/GE"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    },
+    {
+        "id": 4,
+        "titre": "Rigueur",
+        "details": [
+            "Formation initiale informatique : bons réflexes",
+            "Travail avec des athlètes de haut niveau",
+            "Chef d'atelier : méthode / organisation"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    },
+    {
+        "id": 5,
+        "titre": "Curiosité",
+        "details": [
+            "-",
+            "-",
+            "-"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    },
+    {
+        "id": 6,
+        "titre": "Méthode Agile",
+        "details": [
+            "Itérations / incrémentations",
+            "Sprints",
+            "pratiquée dans la startup Hexo+"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    },
+    {
+        "id": 7,
+        "titre": "Ecoute / Relation client",
+        "details": [
+            "Missions freelances",
+            "Respect des deadlines",
+            "analyse / cahier des charges"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": []
+    }
+]

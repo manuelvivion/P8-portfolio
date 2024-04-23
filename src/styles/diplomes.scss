@@ -1,0 +1,45 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.diplomes{
+    background-color: $swift-freeze;
+    &-top{
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top:32px;
+        &-diplome{
+            padding:16px 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 4px;
+            figure{
+                //background-color: $swift-lime-1;
+                border:1px solid $swift-lime-2;
+                width:80px;
+                height:80px;
+                padding:8px;
+                border-radius: 50%;
+                text-align: center;
+            }
+            h3{
+                color:$swift-grass;
+                font-size:24px;
+            }
+            h4{
+                color:$swift-coal-2;
+                font-size:20px;
+                text-transform: uppercase;
+                margin-bottom:8px;
+            }
+            
+        }
+        &-icone{
+            color:$swift-turquoise;
+            font-size:60px !important;
+        }
+    }
+}

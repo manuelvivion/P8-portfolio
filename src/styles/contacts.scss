@@ -1,0 +1,6 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.contacts{
+    background-color: $swift-coal-2;
+}

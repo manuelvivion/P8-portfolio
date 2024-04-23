@@ -1,0 +1,137 @@
+[
+    {
+        "id_experience": 1,
+        "titre": "string 1",
+        "url_cover": "string",
+        "url_images": [],
+        "start_month": 1,
+        "start_year": 2024,
+        "end_month": 12,
+        "end_year": 2024,
+        "poste": "string",
+        "type_contrat": "string",
+        "location_ville": "string",
+        "location_pays": "string",
+        "description": "string",
+        "infos": "string",
+        "competences_id": [
+            1,
+            2,
+            5,
+            6
+        ],
+        "softskill_id": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "id_experience": 2,
+        "titre": "string 2",
+        "url_cover": "string",
+        "url_images": [],
+        "start_month": 1,
+        "start_year": 2024,
+        "end_month": 12,
+        "end_year": 2024,
+        "poste": "string",
+        "type_contrat": "string",
+        "location_ville": "string",
+        "location_pays": "string",
+        "description": "string",
+        "infos": "string",
+        "competences_id": [
+            1,
+            2,
+            5,
+            6
+        ],
+        "softskill_id": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "id_experience": 3,
+        "titre": "string 3",
+        "url_cover": "string",
+        "url_images": [],
+        "start_month": 1,
+        "start_year": 2024,
+        "end_month": 12,
+        "end_year": 2024,
+        "poste": "string",
+        "type_contrat": "string",
+        "location_ville": "string",
+        "location_pays": "string",
+        "description": "string",
+        "infos": "string",
+        "competences_id": [
+            1,
+            2,
+            5,
+            6
+        ],
+        "softskill_id": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "id_experience": 4,
+        "titre": "string 4",
+        "url_cover": "string",
+        "url_images": [],
+        "start_month": 1,
+        "start_year": 2024,
+        "end_month": 12,
+        "end_year": 2024,
+        "poste": "string",
+        "type_contrat": "string",
+        "location_ville": "string",
+        "location_pays": "string",
+        "description": "string",
+        "infos": "string",
+        "competences_id": [
+            1,
+            2,
+            5,
+            6
+        ],
+        "softskill_id": [
+            1,
+            4,
+            5
+        ]
+    },
+    {
+        "id_experience": 5,
+        "titre": "string 5",
+        "url_cover": "string",
+        "url_images": [],
+        "start_month": 1,
+        "start_year": 2024,
+        "end_month": 12,
+        "end_year": 2024,
+        "poste": "string",
+        "type_contrat": "string",
+        "location_ville": "string",
+        "location_pays": "string",
+        "description": "string",
+        "infos": "string",
+        "competences_id": [
+            1,
+            2,
+            5,
+            6
+        ],
+        "softskill_id": [
+            1,
+            4,
+            5
+        ]
+    }
+]

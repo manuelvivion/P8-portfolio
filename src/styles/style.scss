@@ -1,0 +1,76 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+@import "header"; // import header scss file
+@import "intro"; // import intro scss file
+@import "realisations"; // import realisations scss file
+@import "competences"; // import competences scss file
+@import "experiences"; // import expe scss file
+@import "diplomes"; // import diplomes scss file
+@import "apropos"; // import diplomes scss file
+@import "contacts"; // import diplomes scss file
+
+/****** General ***********/
+* {font-family: 'Rajdhani', sans-serif; box-sizing: border-box;} // setting global font and border-box
+
+a {color: inherit;text-decoration: none;} //links
+
+p,pre,h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+
+body{
+    background-color:white;
+    height:100%;
+    margin:0;
+}
+
+header{
+    position: sticky;
+    top:0px;
+    z-index:100;
+}
+
+.section-container{
+    padding:64px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.aeration-basse{
+    height: 128px;
+}
+
+.section-title{
+    h2{
+        padding-bottom:4px;
+        font-size: 32px;
+        font-weight: 300;
+        font-family:"Chakra Petch";
+        text-transform: capitalize;
+    }
+    span{
+        display: block;
+        width:50%;
+        height:3px;
+
+    }
+    &-text{
+        &-swift-lime-1{color:$swift-lime-1;}
+        &-swift-lime-2{color:$swift-lime-2;}
+        &-swift-coal-1{color:$swift-coal-1;}
+        &-swift-coal-2{color:$swift-coal-2;}
+        &-swift-turquoise{color:$swift-turquoise;}
+        &-swift-grass{color:$swift-grass;}
+        &-swift-freeze{color:$swift-freeze;}
+    }
+    &-border{
+        &-swift-lime-1{background-color:$swift-lime-1;}
+        &-swift-lime-2{background-color:$swift-lime-2;}
+        &-swift-coal-1{background-color:$swift-coal-1;}
+        &-swift-coal-2{background-color:$swift-coal-2;}
+        &-swift-turquoise{background-color:$swift-turquoise;}
+        &-swift-grass{background-color:$swift-grass;}
+        &-swift-freeze{background-color:$swift-freeze;}
+    }
+}

@@ -1,0 +1,51 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.apropos{
+background-color: $swift-turquoise;
+p{
+    color:white;
+}
+&-top{
+    margin-top:16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    &-left{
+        padding:8px;
+        img{
+            width:200px;
+            height:200px;
+            border-radius:50%;
+        }
+    }
+    &-right{
+        padding:8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        &-links{
+            display:flex;
+            flex-direction: column;
+
+        }
+        a{
+            color:$swift-lime-1;
+            font-weight: 500;
+            //text-decoration: underline;
+            margin:2px;
+            font-size:16px;
+            display: flex;
+            align-items: center;
+            span{
+                margin-left:8px;
+            }
+        }
+    }
+}
+
+    &-middle{
+        margin-top:16px;
+    }
+}

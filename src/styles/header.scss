@@ -1,0 +1,39 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.top-nav{
+    background-color: $swift-lime-1;
+   /*  position: sticky;
+    top:0px;
+    z-index:100; */
+    max-height:60px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding:16px;
+    border-bottom: 1px solid $swift-coal-1;
+    a{
+        font-size: 20px;
+        color:$swift-coal-2;
+        margin-right:16px;
+        padding-right:16px;
+        display:block;
+        border-right: 2px solid $swift-grass;
+        text-transform: capitalize;
+        &:hover{
+            color:$swift-turquoise;
+        }
+        
+    }
+    .sans-barre{
+        border:none;
+    }
+
+    &-burger{
+        cursor: pointer;
+        &:hover{
+            color:$swift-grass;
+        }
+    }
+}

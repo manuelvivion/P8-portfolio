@@ -1,0 +1,144 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.competences{
+    background-color: $swift-turquoise;
+    &-content{
+        padding:32px 16px;
+        li{
+            margin-top:8px;
+        }
+        &-item{
+            &-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width:100%;
+                h3{
+                    font-size:18px;
+                    font-weight: 500;
+                }
+            }
+            &-realisations{
+                padding:8px;
+                margin-top:8px;
+                border:1px solid $swift-lime-1;
+                border-top:2px solid $swift-grass;
+                width:90%;
+                margin:auto;
+                
+                &-titre{
+                    text-transform: uppercase;
+                    font-size:18px;
+                    color:$swift-turquoise;
+                    margin-bottom:8px;
+                }
+                &-ligne{
+                    width:100%;
+                    background-color: white;
+                    color:$swift-coal-2;
+                    padding:4px 8px;
+                    margin-bottom:8px;
+                    border-radius:4px;
+                    cursor: pointer;
+                    border-bottom: 1px solid $swift-lime-2;
+                    &:hover{
+                        //background-color: $swift-lime-2;
+                        background-color: $swift-lime-1;
+                    }
+                    p{
+                        & :nth-child(1){
+                            color:black;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    &-soft{
+        background-color: $swift-coal-2;
+        &-top{
+            h3{
+                font-family: "Chakra Petch";
+                font-size:24px;
+                color:$swift-freeze;
+                text-align: center;
+                font-weight: 300;
+                margin-bottom: 16px;
+            }
+            p{
+                color:$swift-lime-1;
+                text-align: justify;
+            }
+            &-list{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-top:16px;
+            }
+            &-skill{
+                border-bottom:2px solid $swift-lime-1;
+                padding:8px 32px;
+                text-align: center;
+                width: 48%;
+                margin:8px;
+                cursor: pointer;
+                &:hover{
+                    border-color:$swift-lime-2;
+                }
+                h4{
+                    text-transform: uppercase;
+                    color:$swift-lime-1;
+                    font-weight: 500;
+                }
+                &-selected{
+                    border-bottom:2px solid $swift-lime-2;
+                    //padding-bottom:6;
+                    font-weight: 700;
+                    h4{
+                        color:$swift-lime-2 ;
+                    }
+                }
+            }
+
+        }
+
+        &-bottom{
+            &-titre{
+                width:100%;
+                text-align: center;
+                background-color: $swift-lime-2;
+                border-radius: 6px;
+                padding:8px;
+                margin-top:16px;
+                p{
+                    color:$swift-coal-2;
+                    font-size:18px;
+                    font-weight: 500;
+                }
+            }
+            ul{
+                color:$swift-lime-2;
+            }
+
+            &-texte{
+                color:$swift-lime-1;
+            }
+            &-barre{
+                width:50%;
+                height:2px;
+                display: block;
+                background-color: $swift-lime-1;
+            }
+            &-exemples{
+                padding:16px;
+            }
+        }
+    }
+
+}

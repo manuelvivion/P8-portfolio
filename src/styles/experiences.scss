@@ -1,0 +1,61 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.experiences{
+
+    background-color: $swift-lime-2;
+    &-top{
+        margin-top:16px;
+        p{
+            text-align: justify;
+        }
+    }
+    &-content{ //width : 100%
+        padding-bottom:32px;
+        &-caroussel{
+            padding: 16px 0px;
+        }
+    }
+
+    &-ref{
+        background-color: $swift-coal-1;
+        padding:64px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            color:$swift-lime-2;
+            font-family: "Chakra Petch";
+            font-weight: 300;
+            font-size: 22px;
+            //text-decoration: underline ;
+        }
+        &-logos{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            width: 100%;
+            img{
+                height:150px;
+                width:150px;
+                margin:4px;
+            }
+        }
+        ul{
+            color:$swift-lime-1;
+        }
+    }
+}
+
+.card-experience{
+    background-color: $swift-lime-1;
+    width:90%;
+    max-width:500px;
+    height:500px;
+    margin:auto;
+    border-radius: 8px;
+    filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.15));
+    margin:32px auto;
+    
+}
