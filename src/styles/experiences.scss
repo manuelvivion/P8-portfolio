@@ -23,6 +23,9 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: $breakpoint) { // Responsive  : mobile screen
+            padding:16px;
+        }
         h3{
             color:$swift-lime-2;
             font-family: "Chakra Petch";
@@ -36,10 +39,19 @@
             justify-content: space-between;
             flex-wrap: nowrap;
             width: 100%;
+            @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
             img{
                 height:150px;
                 width:150px;
                 margin:4px;
+                @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                    height:80px;
+                    width: 80px;
+                }
+                
             }
         }
         ul{
@@ -57,5 +69,93 @@
     border-radius: 8px;
     filter: drop-shadow(2px 5px 2px rgba(0,0,0,0.15));
     margin:32px auto;
+
+    
+    &-top{
+        text-align: center;
+        img{
+            width:calc(100% - 8px);
+            height:150px;
+            margin:4px auto;
+            object-fit: cover;
+            border-top-left-radius:4px;
+            border-top-right-radius:4px;
+        }
+        &-frise{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding:4px 16px;
+            align-items: center;
+            span{
+                
+                background: linear-gradient(90deg,$swift-coal-1, $swift-grass);
+                height:2px;
+                flex-grow:1;
+            }
+            p{
+                color:$swift-grass;
+                padding:2px 8px;
+            }
+        }
+
+    }
+    &-date-start{
+        color:$swift-coal-1 !important;
+    }
+    &-middle{
+        margin-top:32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            font-family: "Chakra Petch";
+            font-weight: 400;
+            font-size:22px;
+            color:$swift-grass;
+        }
+        &-contrat{
+            //margin-top:8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-type{
+                color:$swift-coal-1;
+                margin-left:4px;
+            }
+            &-employeur{
+                color:$swift-coal-2;
+                font-weight: 500;
+                margin-right: 4px;
+            }
+        }
+
+        &-location{
+            margin-top:8px;
+            padding:4px 32px;
+            display: flex;
+            align-items: center;
+            border-top:1px solid $swift-lime-2;
+            p{
+                margin:4px;
+                color:$swift-coal-1;
+                font-size:14px;
+            }
+        }
+    }
+
+    &-bottom{
+        &-infos{
+            width:calc(100% - 16px);
+            margin:16px auto;
+            border-top:1px solid $swift-grass;
+            padding:16px;
+            p{
+                color:$swift-coal-2;
+                text-align: justify;
+            }
+        }
+    }
     
 }

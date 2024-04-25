@@ -13,7 +13,7 @@ function Diplomes() {
 
         <section className="diplomes" id="diplomes">
             <div className="section-container">
-                <SectionTitle title={"Diplomes"} fontColor={"swift-coal-2"} borderColor={"swift-grass"} />
+                <SectionTitle title={"Diplômes"} fontColor={"swift-coal-2"} borderColor={"swift-grass"} />
 
 
                 <div className="diplomes-top">

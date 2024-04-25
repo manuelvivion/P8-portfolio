@@ -35,6 +35,9 @@ header{
     padding:64px;
     max-width: 960px;
     margin: auto;
+    @media (max-width: $breakpoint) { // Responsive  : mobile screen
+        padding:16px;
+    }
 }
 
 .aeration-basse{
@@ -48,6 +51,9 @@ header{
         font-weight: 300;
         font-family:"Chakra Petch";
         text-transform: capitalize;
+        @media (max-width: $breakpoint) { // Responsive  : mobile screen
+            font-size: 22px;
+        }
     }
     span{
         display: block;

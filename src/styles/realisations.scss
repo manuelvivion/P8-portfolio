@@ -18,6 +18,10 @@
         align-items: center;
         padding:8px 16px;
 
+        @media (max-width: $breakpoint) { // Responsive  : mobile screen
+            flex-direction: column;
+        }
+
         p{
             font-size:16px;
             line-height:24px;
@@ -29,6 +33,10 @@
             padding:4px 16px;
             text-align: center;
             cursor: pointer;
+            @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                width:100%;
+                margin-top:4px;
+            }
             
         }
         &-categorie{
@@ -55,6 +63,139 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media (max-width: $breakpoint) { // Responsive  : mobile screen
+            justify-content: space-around;
+        }
+    }
+
+    &-seemore{
+        width:100%;
+        margin-top:16px;
+        padding:8px;
+        border-top:2px solid $swift-grass;
+        text-align: center;
+        p{
+            display:block;
+            padding:8px;
+            font-size: 20px;
+            color:$swift-grass;
+            cursor: pointer;
+            &:hover{
+                color:$swift-coal-2;
+            }
+        }
+    }
+
+    &-dialog{
+        &-content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 880px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background-color: white;
+            border-radius: 4px;
+            @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                width: 90%;
+            }
+
+        }
+        
+        &-top{
+            width:100%;
+            position: relative;
+            img{
+                width:calc(100% - 8px);
+                height:200px;
+                margin:4px;
+                object-fit:cover;
+                border-top-right-radius: 4px;
+                border-top-left-radius: 4px;
+            }
+            span{
+                position:absolute;
+                width:36px;
+                height:36px;
+                background-color: white;
+                border-radius: 50%;
+                top:16px;
+                right:16px;
+                color:$swift-turquoise;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    color:$swift-coal-2;
+                }
+            }
+        }
+        &-middle{
+            margin:16px auto;
+            padding:16px;
+            border-top:2px solid $swift-grass;
+            width: calc(100% - 8px);
+            text-align: center;
+            h4{
+                font-family:"Chakra Petch";
+                font-size:24px;
+                color:$swift-grass;
+            }
+            h5{
+                font-size:18px;
+                font-weight: 400;
+                margin-bottom:16px;
+            }
+            &-infos{
+                width:80%;
+                @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                    width: 95%;
+                }
+                div{
+                    border-left:2px solid $swift-coal-1;
+                    margin-top:16px;
+                    padding:8px;
+                    text-align: left;
+                }
+                p{
+                    margin-top:8px;
+                    color:$swift-coal-2;
+                }
+                a{
+                    span{
+                        color:black;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &-bottom{
+            text-align: center;
+            button{
+                margin-top:16px;
+                color:$swift-grass;
+            }
+            &-photos{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                img{
+                    width:45%;
+                    height:100px;
+                    object-fit: cover;
+                    margin:4px;
+                    cursor: pointer;
+                    @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                        width: 90%;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -109,6 +250,9 @@
                 color:$swift-grass;
                 font-family: "Chakra Petch";
                 font-size:16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
             }
         }
@@ -129,5 +273,15 @@
             font-family: "Rajdhani" !important;
            
         }
+    }
+
+    .categorie-couleur-1{
+        color:$swift-grass;
+    }
+    .categorie-couleur-2{
+        color:#7458e8;
+    }
+    .categorie-couleur-3{
+        color: rgb(197, 105, 0);;
     }
 }

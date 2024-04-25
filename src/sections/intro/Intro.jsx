@@ -8,7 +8,7 @@ function Intro() {
 
     return (
 
-        <section className="intro">
+        <section className="intro" id="intro">
             <div className="intro-top">
                 <h1><span className="intro-top-txt1">Bonjour! Je suis</span>Manuel VIVION<br /><span className="intro-top-txt2">Développeur web fullstack</span></h1>
                 <span className="intro-top-underline"></span>

@@ -9,6 +9,7 @@ import categories from '../../data/categories.json'
 import listRealisations from '../../data/realisations.json'
 import listCompetences from '../../data/competences.json'
 import listSoftSkills from '../../data/softskills.json'
+import listExperiences from '../../data/experiences.json'
 
 
 //MUI :
@@ -19,6 +20,19 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
+
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
+import HearingIcon from '@mui/icons-material/Hearing';
+import CropSquareIcon from '@mui/icons-material/CropSquare';
+import LayersIcon from '@mui/icons-material/Layers';
+
+import CloseIcon from '@mui/icons-material/Close';
+import EastIcon from '@mui/icons-material/East';
+
+const iconesList = [<AutoStoriesIcon />, <LayersIcon />, <Diversity3Icon />, <CropSquareIcon />, <RemoveRedEyeIcon />, <SignalCellularAltIcon />, <HearingIcon />]
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -60,15 +74,21 @@ function Competences() {
 
     const [expanded, setExpanded] = useState(0);
     const [skillId, setSkillId] = useState(0);
+    const [panelOpen, setPanelOpen] = useState(false);
 
     const handleChange = (panel) => (event, newExpanded) => {
         setExpanded(newExpanded ? panel : false);
+        setPanelOpen(false);
     };
 
     function getReal(id) {
         let realisation = listRealisations.find((real) => real.id_realisation === id);
         let categorie = categories.find((cat) => cat.id === realisation.id_categorie);
         return ({ titre: realisation.titre, categorie: categorie.label })
+    }
+
+    function getExp(id) {
+        return listExperiences.find((exp) => exp.id_experience === id);
     }
 
     function getSkill() {
@@ -90,7 +110,7 @@ function Competences() {
                     <div className="competences-content-main">
                         <div>
                             {listCompetences.map((comp) => (
-                                <Accordion expanded={expanded === comp.id} onChange={handleChange(comp.id)}>
+                                <Accordion expanded={expanded === comp.id} onChange={handleChange(comp.id)} key={comp.id}>
                                     <AccordionSummary >
                                         <div className="competences-content-item-header">
                                             <h3>{comp.titre}</h3>
@@ -100,19 +120,21 @@ function Competences() {
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <ul>
-                                            {comp.details.map((detail) => (
-                                                <li>{detail}</li>
+                                            {comp.details.map((detail, index) => (
+                                                <li key={index}>{detail}</li>
                                             ))}
                                         </ul>
                                         <div className="competences-content-item-realisations">
-                                            <p className="competences-content-item-realisations-titre">Mise en partique sur ces projets : </p>
-                                            {
+                                            <p className="competences-content-item-realisations-titre"
+                                                onClick={_ => setPanelOpen(!panelOpen)}
+                                            >Mise en pratique : {panelOpen ? null : <span><EastIcon /> Cliquez pour voir les projets</span>}</p>
+                                            {panelOpen ?
                                                 comp.realisations_id.map((id) => (
-                                                    <div className="competences-content-item-realisations-ligne" onClick={_ => handleOpenReal(id)}>
+                                                    <div key={id} className="competences-content-item-realisations-ligne" onClick={_ => handleOpenReal(id)}>
                                                         <p><span>{getReal(id).titre}</span> / <span>{getReal(id).categorie}</span> / voir plus...</p>
                                                     </div>
                                                 ))
-                                            }
+                                                : null}
 
                                         </div>
                                     </AccordionDetails>
@@ -131,7 +153,7 @@ function Competences() {
 
 
             </div>
-            <div className="competences-soft">
+            <div className="competences-soft" id="softskills">
                 <div className="section-container">
                     <div className="competences-soft-top">
                         <h3>Soft Skills</h3>
@@ -139,10 +161,10 @@ function Competences() {
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu  elementum nunc. Sed sit amet nisi dignissim, vulputate sapien ac,  viverra velit. Ut pretium quis orci ac malesuada. Quisque vel metus sit  amet quam lobortis egestas non sit amet est. Sed non lectus nec lectus  lacinia mollis vel non velit. Suspendisse venenatis dui id massa  molestie scelerisque. Nulla
                         </p>
                         <div className="competences-soft-top-list">
-                            {listSoftSkills.map((skill) => (
-                                <div className={skill.id === skillId ? "competences-soft-top-skill competences-soft-top-skill-selected" : "competences-soft-top-skill"}
+                            {listSoftSkills.map((skill, index) => (
+                                <div key={index} className={skill.id === skillId ? "competences-soft-top-skill competences-soft-top-skill-selected" : "competences-soft-top-skill"}
                                     onClick={_ => setSkillId(skill.id === skillId ? 0 : skill.id)}>
-                                    <h4>{skill.titre}</h4>
+                                    <h4>{iconesList[index]}<span>{skill.titre}</span></h4>
                                 </div>
                             ))}
                         </div>
@@ -153,26 +175,50 @@ function Competences() {
 
                             <div className="competences-soft-bottom-titre">
                                 <p>{getSkill().titre}</p>
+                                <CloseIcon className="competences-soft-close-icon" onClick={_ => setSkillId(0)} />
                             </div>
 
-                            <ul>
-                                {getSkill().details.map((detail) => (
-                                    <li>{detail}</li>
-                                ))}
-                            </ul>
+                            {
+                                getSkill().realisations_id.length === 0 && getSkill().experiences_id.length === 0 ?
+                                    null
+                                    :
+                                    <div className="competences-soft-bottom-content">
 
-                            <p className="competences-soft-bottom-texte">Mise en pratique : </p>
-                            <span className="competences-soft-bottom-barre"></span>
+                                        <ul>
+                                            {getSkill().details.map((detail, index) => (
+                                                <li key={index}>{detail}</li>
+                                            ))}
+                                        </ul>
 
-                            <div className="competences-soft-bottom-exemples">
-                                {getSkill().realisations_id.map((id) => (
-                                    <div className="competences-content-item-realisations-ligne" onClick={_ => handleOpenReal(id)}>
-                                        <p><span>{getReal(id).titre}</span> / <span>{getReal(id).categorie}</span> / voir plus...</p>
+                                        <p className="competences-soft-bottom-texte">Mise en pratique : </p>
+                                        <span className="competences-soft-bottom-barre"></span>
+
+                                        <div className="competences-soft-bottom-exemples">
+                                            {getSkill().realisations_id.map((id) => (
+                                                <div className="competences-content-item-realisations-ligne" onClick={_ => handleOpenReal(id)}>
+                                                    <p><span>{getReal(id).titre}</span> / <span>{getReal(id).categorie}</span> / voir plus...</p>
+                                                </div>
+                                            ))
+
+                                            }
+                                            {getSkill().experiences_id.map((id) => (
+                                                <div className="competences-content-item-experience-ligne">
+                                                    <p>
+                                                        <span>{getExp(id).titre}</span>
+                                                        <span>/</span>
+                                                        <span>{getExp(id).employeur}</span>
+                                                        <span>{getExp(id).employeur.length > 2 ? "/" : ""}</span>
+                                                        <span>{getExp(id).type_contrat}</span>
+                                                        <span>/</span>
+                                                        <span>{getExp(id).start_year}-{getExp(id).end_year === 0 ? 2024 : getExp(id).end_year}</span>
+                                                    </p>
+                                                </div>
+                                            ))
+
+                                            }
+                                        </div>
                                     </div>
-                                ))
-
-                                }
-                            </div>
+                            }
 
                         </div>
                         : null}

@@ -35,15 +35,15 @@ function Experiences() {
                         additionalTransfrom={0}
                         arrows
                         autoPlaySpeed={3000}
-                        centerMode={true}
-                        //partialVisible
+                        centerMode={window.innerWidth > 800}
+
                         className=""
-                        containerClass="card-experience-container"
+                        containerClass="container"
                         dotListClass=""
                         draggable
                         focusOnSelect={false}
                         infinite
-                        itemClass="card-experience-wrapper"
+                        itemClass=""
                         keyBoardControl
                         minimumTouchDrag={80}
                         pauseOnHover
@@ -86,7 +86,7 @@ function Experiences() {
                         swipeable
                     >
                         {listExperiences.map((exp) => (
-                            <CardExperience exp={exp} />
+                            <CardExperience exp={exp} key={exp.id_experience} />
 
                         ))}
 
@@ -97,7 +97,7 @@ function Experiences() {
 
             </div>
 
-            <div className="experiences-ref">
+            <div className="experiences-ref" id="references">
                 <h3>Clients</h3>
                 <div className="experiences-ref-logos">
                     <img src={require('../../images/logos/clients/groupama.png')} alt="logo client groupama" />

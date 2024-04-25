@@ -11,6 +11,10 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    @media (max-width: $breakpoint) { // Responsive  : mobile screen
+        flex-direction: column;
+        align-items: center;
+    }
     &-left{
         padding:8px;
         img{
@@ -28,6 +32,9 @@ p{
         &-links{
             display:flex;
             flex-direction: column;
+            @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                margin-top:16px;
+            }
 
         }
         a{

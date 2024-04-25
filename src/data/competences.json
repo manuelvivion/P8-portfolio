@@ -22,7 +22,7 @@
     {
         "id": 2,
         "titre": "Gestion de projet et outils de développeurs",
-        "rating": 4,
+        "rating": 3,
         "details": [
             "Suivre le déroulement du projet grâce à un outil de gestion de projet",
             "Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
@@ -53,7 +53,7 @@
     {
         "id": 3,
         "titre": "Optimisation et debug",
-        "rating": 4,
+        "rating": 3,
         "details": [
             "Optimiser les performances d’un site web",
             "Débugger un site web grâce aux Chrome DevTools",
@@ -71,7 +71,7 @@
     {
         "id": 4,
         "titre": "Développement web avec JavaScript",
-        "rating": 4,
+        "rating": 5,
         "details": [
             "Récupérer les données utilisateurs dans le JavaScript via des formulaires",
             "Manipuler les éléments du DOM avec JavaScript",
@@ -154,7 +154,7 @@
     {
         "id": 8,
         "titre": "Publication d'un site web",
-        "rating": 4,
+        "rating": 3,
         "details": [
             "Déployer un site statique en ligne",
             "Déploiement application SPA sur Google Firebase",
@@ -172,7 +172,7 @@
     {
         "id": 9,
         "titre": "Bases de données",
-        "rating": 4,
+        "rating": 3,
         "details": [
             "Bases de données relationnelles (jointures int. ext., ...)",
             "PHP/MySQL",

@@ -23,6 +23,11 @@
 .top-nav a:hover {
   color: #3CACAB;
 }
+@media (max-width: 880px) {
+  .top-nav a {
+    display: none;
+  }
+}
 .top-nav .sans-barre {
   border: none;
 }
@@ -31,6 +36,35 @@
 }
 .top-nav-burger:hover {
   color: #2B9E9C;
+}
+.top-nav-menu-popover {
+  background-color: #F0EFEA;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.top-nav-menu-popover a {
+  display: block;
+  width: 180px;
+  padding: 8px;
+  text-align: right;
+  font-size: 18px;
+  margin: 1px;
+  text-transform: capitalize;
+  border-bottom: 1px solid;
+  color: #394848;
+}
+.top-nav-menu-popover a:hover {
+  font-weight: 500;
+  background-color: #BADE9A;
+}
+.top-nav-menu-popover a:nth-child(1), .top-nav-menu-popover a:nth-child(3), .top-nav-menu-popover a:nth-child(4), .top-nav-menu-popover a:nth-child(7) {
+  color: #687777;
+}
+.top-nav-root-popover {
+  margin-top: 18px;
+  margin-left: 16px;
 }
 
 .intro {
@@ -60,16 +94,33 @@
   text-align: center;
   line-height: 32px;
 }
+@media (max-width: 880px) {
+  .intro-top h1 {
+    font-size: 22px;
+  }
+}
 .intro-top-txt1 {
   font-family: "Rajdhani";
   font-weight: 400;
   font-size: 24px;
   margin-right: 8px;
+  font-size: 32px;
+}
+@media (max-width: 880px) {
+  .intro-top-txt1 {
+    font-size: 20px;
+  }
 }
 .intro-top-txt2 {
   font-family: "Rajdhani";
   font-size: 24px;
   color: #2B9E9C;
+}
+@media (max-width: 880px) {
+  .intro-top-txt2 {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
 .intro-middle img {
   border-radius: 50%;
@@ -83,8 +134,18 @@
   justify-content: space-evenly;
   align-items: center;
 }
+@media (max-width: 880px) {
+  .intro-bottom {
+    width: 100%;
+  }
+}
 .intro-bottom img {
   max-height: 36px;
+}
+@media (max-width: 880px) {
+  .intro-bottom img {
+    max-height: 26px;
+  }
 }
 
 .realisations {
@@ -103,6 +164,11 @@
   align-items: center;
   padding: 8px 16px;
 }
+@media (max-width: 880px) {
+  .realisations-selector {
+    flex-direction: column;
+  }
+}
 .realisations-selector p {
   font-size: 16px;
   line-height: 24px;
@@ -112,6 +178,12 @@
   padding: 4px 16px;
   text-align: center;
   cursor: pointer;
+}
+@media (max-width: 880px) {
+  .realisations-selector-categorie, .realisations-selector-categorie-selected {
+    width: 100%;
+    margin-top: 4px;
+  }
 }
 .realisations-selector-categorie {
   color: #F0EFEA;
@@ -133,6 +205,138 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+@media (max-width: 880px) {
+  .realisations-list {
+    justify-content: space-around;
+  }
+}
+.realisations-seemore {
+  width: 100%;
+  margin-top: 16px;
+  padding: 8px;
+  border-top: 2px solid #2B9E9C;
+  text-align: center;
+}
+.realisations-seemore p {
+  display: block;
+  padding: 8px;
+  font-size: 20px;
+  color: #2B9E9C;
+  cursor: pointer;
+}
+.realisations-seemore p:hover {
+  color: #394848;
+}
+.realisations-dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 880px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 4px;
+}
+@media (max-width: 880px) {
+  .realisations-dialog-content {
+    width: 90%;
+  }
+}
+.realisations-dialog-top {
+  width: 100%;
+  position: relative;
+}
+.realisations-dialog-top img {
+  width: calc(100% - 8px);
+  height: 200px;
+  margin: 4px;
+  object-fit: cover;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.realisations-dialog-top span {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border-radius: 50%;
+  top: 16px;
+  right: 16px;
+  color: #3CACAB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.realisations-dialog-top span:hover {
+  color: #394848;
+}
+.realisations-dialog-middle {
+  margin: 16px auto;
+  padding: 16px;
+  border-top: 2px solid #2B9E9C;
+  width: calc(100% - 8px);
+  text-align: center;
+}
+.realisations-dialog-middle h4 {
+  font-family: "Chakra Petch";
+  font-size: 24px;
+  color: #2B9E9C;
+}
+.realisations-dialog-middle h5 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.realisations-dialog-middle-infos {
+  width: 80%;
+}
+@media (max-width: 880px) {
+  .realisations-dialog-middle-infos {
+    width: 95%;
+  }
+}
+.realisations-dialog-middle-infos div {
+  border-left: 2px solid #687777;
+  margin-top: 16px;
+  padding: 8px;
+  text-align: left;
+}
+.realisations-dialog-middle-infos p {
+  margin-top: 8px;
+  color: #394848;
+}
+.realisations-dialog-middle-infos a span {
+  color: black;
+  font-weight: 600;
+}
+.realisations-dialog-bottom {
+  text-align: center;
+}
+.realisations-dialog-bottom button {
+  margin-top: 16px;
+  color: #2B9E9C;
+}
+.realisations-dialog-bottom-photos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.realisations-dialog-bottom-photos img {
+  width: 45%;
+  height: 100px;
+  object-fit: cover;
+  margin: 4px;
+  cursor: pointer;
+}
+@media (max-width: 880px) {
+  .realisations-dialog-bottom-photos img {
+    width: 90%;
+  }
 }
 
 .card-realisation {
@@ -183,6 +387,9 @@
   color: #2B9E9C;
   font-family: "Chakra Petch";
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card-realisation-description {
   color: #394848;
@@ -198,6 +405,15 @@
   background-color: #2B9E9C !important;
   font-family: "Rajdhani" !important;
 }
+.card-realisation .categorie-couleur-1 {
+  color: #2B9E9C;
+}
+.card-realisation .categorie-couleur-2 {
+  color: #7458e8;
+}
+.card-realisation .categorie-couleur-3 {
+  color: rgb(197, 105, 0);
+}
 
 .competences {
   background-color: #3CACAB;
@@ -208,12 +424,26 @@
 .competences-content li {
   margin-top: 8px;
 }
+@media (max-width: 880px) {
+  .competences-content {
+    padding: 16px 8px;
+  }
+}
 .competences-content-item-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media (max-width: 880px) {
+  .competences-content-item-header {
+    flex-wrap: wrap;
+  }
+  .competences-content-item-header h3 {
+    font-size: 16px;
+    width: 100%;
+  }
 }
 .competences-content-item-header h3 {
   font-size: 18px;
@@ -229,9 +459,34 @@
 }
 .competences-content-item-realisations-titre {
   text-transform: uppercase;
-  font-size: 18px;
-  color: #3CACAB;
+  font-size: 16px;
+  color: #F0EFEA;
   margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #2B9E9C;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+@media (max-width: 880px) {
+  .competences-content-item-realisations-titre {
+    flex-direction: column;
+  }
+  .competences-content-item-realisations-titre span {
+    margin-left: 4px;
+    font-size: 14px;
+  }
+}
+.competences-content-item-realisations-titre span {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+.competences-content-item-realisations-titre:hover {
+  color: #F0EFEA;
+  background-color: #394848;
 }
 .competences-content-item-realisations-ligne {
   width: 100%;
@@ -249,6 +504,24 @@
 .competences-content-item-realisations-ligne p :nth-child(1) {
   color: black;
   font-weight: 500;
+}
+.competences-content-item-experience-ligne {
+  width: 100%;
+  background-color: #687777;
+  color: #F0EFEA;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-bottom: 1px solid #BADE9A;
+}
+.competences-content-item-experience-ligne span {
+  margin-right: 6px;
+}
+.competences-content-item-experience-ligne span:nth-child(1) {
+  color: #BADE9A !important;
+}
+.competences-content-item-experience-ligne span:nth-child(7) {
+  color: #9FE5E4 !important;
 }
 .competences-soft {
   background-color: #394848;
@@ -273,12 +546,18 @@
   margin-top: 16px;
 }
 .competences-soft-top-skill {
-  border-bottom: 2px solid #F0EFEA;
+  border-bottom: 1px solid #F0EFEA;
   padding: 8px 32px;
   text-align: center;
-  width: 48%;
+  width: 47%;
   margin: 8px;
   cursor: pointer;
+}
+@media (max-width: 880px) {
+  .competences-soft-top-skill {
+    width: 98%;
+    padding: 8px;
+  }
 }
 .competences-soft-top-skill:hover {
   border-color: #BADE9A;
@@ -287,6 +566,12 @@
   text-transform: uppercase;
   color: #F0EFEA;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.competences-soft-top-skill h4 span {
+  margin-left: 8px;
 }
 .competences-soft-top-skill-selected {
   border-bottom: 2px solid #BADE9A;
@@ -301,27 +586,40 @@
   background-color: #BADE9A;
   border-radius: 6px;
   padding: 8px;
-  margin-top: 16px;
+  margin-top: 32px;
+  position: relative;
 }
 .competences-soft-bottom-titre p {
   color: #394848;
   font-size: 18px;
   font-weight: 500;
 }
+.competences-soft-bottom-content {
+  background-color: #F0EFEA;
+  margin-top: 4px;
+  border-radius: 4px;
+  padding: 8px;
+}
 .competences-soft-bottom ul {
-  color: #BADE9A;
+  color: #394848;
 }
 .competences-soft-bottom-texte {
-  color: #F0EFEA;
+  color: #394848;
 }
 .competences-soft-bottom-barre {
   width: 50%;
   height: 2px;
   display: block;
-  background-color: #F0EFEA;
+  background-color: #2B9E9C;
 }
 .competences-soft-bottom-exemples {
   padding: 16px;
+}
+.competences-soft-close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 16px;
 }
 
 .experiences {
@@ -346,6 +644,11 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 880px) {
+  .experiences-ref {
+    padding: 16px;
+  }
+}
 .experiences-ref h3 {
   color: #BADE9A;
   font-family: "Chakra Petch";
@@ -359,10 +662,22 @@
   flex-wrap: nowrap;
   width: 100%;
 }
+@media (max-width: 880px) {
+  .experiences-ref-logos {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 .experiences-ref-logos img {
   height: 150px;
   width: 150px;
   margin: 4px;
+}
+@media (max-width: 880px) {
+  .experiences-ref-logos img {
+    height: 80px;
+    width: 80px;
+  }
 }
 .experiences-ref ul {
   color: #F0EFEA;
@@ -378,6 +693,85 @@
   filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.15));
   margin: 32px auto;
 }
+.card-experience-top {
+  text-align: center;
+}
+.card-experience-top img {
+  width: calc(100% - 8px);
+  height: 150px;
+  margin: 4px auto;
+  object-fit: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.card-experience-top-frise {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4px 16px;
+  align-items: center;
+}
+.card-experience-top-frise span {
+  background: linear-gradient(90deg, #687777, #2B9E9C);
+  height: 2px;
+  flex-grow: 1;
+}
+.card-experience-top-frise p {
+  color: #2B9E9C;
+  padding: 2px 8px;
+}
+.card-experience-date-start {
+  color: #687777 !important;
+}
+.card-experience-middle {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-experience-middle h3 {
+  font-family: "Chakra Petch";
+  font-weight: 400;
+  font-size: 22px;
+  color: #2B9E9C;
+}
+.card-experience-middle-contrat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-experience-middle-contrat-type {
+  color: #687777;
+  margin-left: 4px;
+}
+.card-experience-middle-contrat-employeur {
+  color: #394848;
+  font-weight: 500;
+  margin-right: 4px;
+}
+.card-experience-middle-location {
+  margin-top: 8px;
+  padding: 4px 32px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #BADE9A;
+}
+.card-experience-middle-location p {
+  margin: 4px;
+  color: #687777;
+  font-size: 14px;
+}
+.card-experience-bottom-infos {
+  width: calc(100% - 16px);
+  margin: 16px auto;
+  border-top: 1px solid #2B9E9C;
+  padding: 16px;
+}
+.card-experience-bottom-infos p {
+  color: #394848;
+  text-align: justify;
+}
 
 .diplomes {
   background-color: #9FE5E4;
@@ -389,6 +783,13 @@
   justify-content: space-evenly;
   margin-top: 32px;
 }
+@media (max-width: 880px) {
+  .diplomes-top {
+    flex-direction: column;
+    padding: 32px;
+    margin-top: 8px;
+  }
+}
 .diplomes-top-diplome {
   padding: 16px 8px;
   display: flex;
@@ -396,6 +797,11 @@
   align-items: center;
   background-color: white;
   border-radius: 4px;
+}
+@media (max-width: 880px) {
+  .diplomes-top-diplome {
+    margin: 8px;
+  }
 }
 .diplomes-top-diplome figure {
   border: 1px solid #BADE9A;
@@ -432,6 +838,12 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+@media (max-width: 880px) {
+  .apropos-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .apropos-top-left {
   padding: 8px;
 }
@@ -450,6 +862,11 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 880px) {
+  .apropos-top-right-links {
+    margin-top: 16px;
+  }
+}
 .apropos-top-right a {
   color: #F0EFEA;
   font-weight: 500;
@@ -467,6 +884,38 @@
 
 .contacts {
   background-color: #394848;
+}
+.contacts-top {
+  margin: 16px auto;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 880px) {
+  .contacts-top {
+    flex-direction: column;
+    align-items: left;
+  }
+}
+.contacts-top-left p {
+  font-size: 18px;
+  color: #F0EFEA;
+  margin: 8px;
+}
+.contacts-top-right {
+  text-align: right;
+}
+@media (max-width: 880px) {
+  .contacts-top-right {
+    margin-top: 16px;
+    text-align: left;
+  }
+}
+.contacts-top-right p {
+  font-size: 18px;
+  color: #F0EFEA;
+  margin: 8px;
 }
 
 /****** General ***********/
@@ -501,6 +950,11 @@ header {
   max-width: 960px;
   margin: auto;
 }
+@media (max-width: 880px) {
+  .section-container {
+    padding: 16px;
+  }
+}
 
 .aeration-basse {
   height: 128px;
@@ -512,6 +966,11 @@ header {
   font-weight: 300;
   font-family: "Chakra Petch";
   text-transform: capitalize;
+}
+@media (max-width: 880px) {
+  .section-title h2 {
+    font-size: 22px;
+  }
 }
 .section-title span {
   display: block;
