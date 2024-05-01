@@ -25,7 +25,7 @@ function Experiences() {
                 <SectionTitle title={"Expériences"} fontColor={"swift-coal-2"} borderColor={"swift-turquoise"} />
                 <div className="experiences-top">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu  elementum nunc. Sed sit amet nisi dignissim, vulputate sapien ac,  viverra velit. Ut pretium quis orci ac malesuada. Quisque vel metus sit  amet quam lobortis egestas non sit amet est. Sed non lectus nec lectus  lacinia mollis vel non velit. Suspendisse venenatis dui id massa  molestie scelerisque. Nulla
+                        Mon parcours professionnel a déjà été riche et varié. J'ai eu la chance d'évoluer à différents postes, d'exercer différents métiers, dans différents types d'entreprises situées dans diverses régions françaises. Cette richesse d'expérience est un atout sur lequel je peux m'appuyer pour les projets futurs.
                     </p>
                 </div>
             </div>
@@ -108,8 +108,8 @@ function Experiences() {
                 </div>
                 <h3>Références</h3>
                 <ul>
-                    <li>Travail avec Athlètes professionnels, dont certains multiples champions du monde ou médailles d’or aux X games.</li>
-                    <li>lauréat du prix “Short Film” au festival International du film de moto de New York</li>
+                    <li>Travail avec athlètes professionnels, certains <a href="https://www.lequipe.fr/Snowboard-freeride/Actualites/Victor-de-le-rue-ce-troisieme-sacre-est-vraiment-special/1454728" target="_blank">multiples champions du monde</a> ou <a href="https://fr.wikipedia.org/wiki/Bob_Burnquist" target="_blank">médaillés d’or aux X games.</a></li>
+                    <li>lauréat en 2017 du prix “Short Film” au <a href="http://motorcyclefilmfestival.com/life-of-brian/" target="_blank">Festival International du Film de Moto de New York</a></li>
                 </ul>
 
                 <div className="aeration-basse"></div>

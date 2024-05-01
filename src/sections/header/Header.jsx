@@ -3,6 +3,8 @@ import { useState } from 'react';
 //MUI :
 import MenuIcon from '@mui/icons-material/Menu';
 import Popover from '@mui/material/Popover';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Header() {
 
@@ -22,36 +24,44 @@ function Header() {
     return (
 
         <nav className="top-nav">
-            <a href="#realisations">Réalisations</a>
-            <a href="#competences">Compétences</a>
-            <a href="#apropos">à propos</a>
-            <a href="#contacts" className="sans-barre">Contacts</a>
-            <MenuIcon className="top-nav-burger" onClick={handleClick} />
+            <div className="top-nav-left">
+                <a href="https://github.com/manuelvivion" target="_blank"><GitHubIcon /></a>
+                <a href="https://www.linkedin.com/in/manuel-vivion-30544b83" target="_blank"><LinkedInIcon /></a>
+            </div>
 
-            <Popover
-                className="top-nav-root-popover"
-                id={id}
-                open={open}
-                anchorEl={anchorEl}
-                onClose={handleClose}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-            >
+            <div className="top-nav-right">
 
-                <div className="top-nav-menu-popover" onClick={handleClose}>
-                    <a href="#intro">Bonjour!</a>
-                    <a href="#realisations">réalisations</a>
-                    <a href="#competences">compétences</a>
-                    <a href="#softskills">Soft Skills</a>
-                    <a href="#experiences">expériences</a>
-                    <a href="#references">références</a>
-                    <a href="#diplomes">diplômes</a>
-                    <a href="#apropos">à propos</a>
-                    <a href="#contacts">contacts</a>
-                </div>
-            </Popover>
+                <a href="#realisations">Réalisations</a>
+                <a href="#competences">Compétences</a>
+                <a href="#apropos">à propos</a>
+                <a href="#contacts" className="sans-barre">Contacts</a>
+                <MenuIcon className="top-nav-burger" onClick={handleClick} />
+
+                <Popover
+                    className="top-nav-root-popover"
+                    id={id}
+                    open={open}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left',
+                    }}
+                >
+
+                    <div className="top-nav-menu-popover" onClick={handleClose}>
+                        <a href="#intro">Bonjour!</a>
+                        <a href="#realisations">réalisations</a>
+                        <a href="#competences">compétences</a>
+                        <a href="#softskills">Soft Skills</a>
+                        <a href="#experiences">expériences</a>
+                        <a href="#references">références</a>
+                        <a href="#diplomes">diplômes</a>
+                        <a href="#apropos">à propos</a>
+                        <a href="#contacts">contacts</a>
+                    </div>
+                </Popover>
+            </div>
         </nav>
     );
 }

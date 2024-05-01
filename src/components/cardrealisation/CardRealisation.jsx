@@ -14,6 +14,9 @@ import Slide from '@mui/material/Slide';
 import categories from '../../data/categories.json'
 import tags from '../../data/tags.json'
 
+//created components
+import ModalRealisation from '../modalrealisation/ModalRealisation.jsx'
+
 
 
 function CardRealisations({ real }) {
@@ -46,7 +49,7 @@ function CardRealisations({ real }) {
 
         <div className="card-realisation">
             <div className="card-realisation-top">
-                <img src={require("../../images/" + real.url_cover)} />
+                <img src={require("../../images/" + real.url_cover)} alt="image de couverture de cette réalisation" />
             </div>
             <div className="card-realisation-middle">
 
@@ -74,42 +77,9 @@ function CardRealisations({ real }) {
                 open={open}
                 onClose={handleClose}
             >
-                <article className="realisations-dialog-content">
-
-
-                    <div className="realisations-dialog-top">
-                        <img src={require("../../images/" + real.url_cover)} />
-                        <span onClick={handleClose}><CloseIcon /></span>
-                    </div>
-                    <div className="realisations-dialog-middle">
-                        <h4>{real.titre}</h4>
-                        <h5> - {getCategorie(real.id_categorie)} - </h5>
-                        <div className="realisations-dialog-middle-infos">
-
-                            <div>
-                                <h5>{real.description}</h5>
-                                <p>{real.infos}</p>
-                                <p>{real.infos2}</p>
-                                <p>{real.infos3}</p>
-                            </div>
-                            <div>
-                                <a href={real.lien}><p>lien : <span>{real.lien}</span></p></a>
-                                <a href={real.lien_github}><p>lien Github : <span>{real.lien_github}</span></p></a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div className="realisations-dialog-bottom">
-                        <div className="realisations-dialog-bottom-photos">
-                            <img src={require("../../images/realisations/covers/1.jpg")} alt="screenshot de code" />
-                            <img src={require("../../images/realisations/covers/1.jpg")} alt="screenshot de code" />
-                            <img src={require("../../images/realisations/covers/1.jpg")} alt="screenshot de code" />
-                            <img src={require("../../images/realisations/covers/1.jpg")} alt="screenshot de code" />
-                        </div>
-
-                        <Button onClick={handleClose}>OK</Button>
-                    </div>
-                </article>
+                <>
+                    <ModalRealisation real={real} handleClose={handleClose} />
+                </>
             </Modal>
 
         </div>

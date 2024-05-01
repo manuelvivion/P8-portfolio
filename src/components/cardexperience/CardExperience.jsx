@@ -1,10 +1,9 @@
 
 //MUI :
-import Button from '@mui/material/Button';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 
 //data
-import categories from '../../data/categories.json'
-import tags from '../../data/tags.json'
+import softSkills from '../../data/softskills.json'
 
 function CardExperience({ exp }) {
 
@@ -19,6 +18,16 @@ function CardExperience({ exp }) {
         let moi = exp.end_month === 0 ? "Aujourd'hui" : mois[exp.end_month - 1];
         let an = exp.end_month === 0 ? "" : ` ${exp.end_year}`;
         return moi + an;
+    }
+
+    function getSofts(list) {
+        let infos = "";
+        list.forEach((soft, index) => {
+            infos += index === 0 ? "" : " , "
+            infos += softSkills.find((s) => s.id === soft).titre;
+        })
+
+        return infos;
     }
 
     return (
@@ -51,6 +60,9 @@ function CardExperience({ exp }) {
                 <div className="card-experience-bottom-infos">
                     <p>{exp.description}</p>
                     <p>{exp.infos}</p>
+                </div>
+                <div className="card-experience-bottom-softs">
+                    <p><span><TaskAltIcon /></span>{getSofts(exp.softskill_id)}</p>
                 </div>
             </div>
 

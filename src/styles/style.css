@@ -6,10 +6,25 @@
   max-height: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 16px;
   border-bottom: 1px solid #687777;
+}
+.top-nav-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.top-nav-left a {
+  border: none !important;
+}
+.top-nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 }
 .top-nav a {
   font-size: 20px;
@@ -245,6 +260,21 @@
     width: 90%;
   }
 }
+.realisations-dialog-content-focusimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+.realisations-dialog-content-focusimage img {
+  width: 100%;
+  object-fit: cover;
+}
 .realisations-dialog-top {
   width: 100%;
   position: relative;
@@ -270,9 +300,17 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.15));
 }
 .realisations-dialog-top span:hover {
   color: #394848;
+}
+.realisations-dialog-top-fondu {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  height: 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 .realisations-dialog-middle {
   margin: 16px auto;
@@ -292,12 +330,15 @@
   margin-bottom: 16px;
 }
 .realisations-dialog-middle-infos {
-  width: 80%;
+  width: 100%;
 }
 @media (max-width: 880px) {
   .realisations-dialog-middle-infos {
     width: 95%;
   }
+}
+.realisations-dialog-middle-infos-1 {
+  font-weight: 600;
 }
 .realisations-dialog-middle-infos div {
   border-left: 2px solid #687777;
@@ -309,29 +350,51 @@
   margin-top: 8px;
   color: #394848;
 }
+.realisations-dialog-middle-infos p span {
+  text-decoration: underline;
+}
 .realisations-dialog-middle-infos a span {
   color: black;
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 .realisations-dialog-bottom {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .realisations-dialog-bottom button {
   margin-top: 16px;
   color: #2B9E9C;
 }
+.realisations-dialog-bottom-expand {
+  background-color: #2B9E9C !important;
+  color: #F0EFEA !important;
+  width: calc(100% - 8px) !important;
+  margin: 8px auto !important;
+  display: flex;
+}
+.realisations-dialog-bottom-expand:hover {
+  background-color: #687777 !important;
+  color: #BADE9A !important;
+}
 .realisations-dialog-bottom-photos {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  background-color: #394848;
+  padding: 8px;
 }
 .realisations-dialog-bottom-photos img {
-  width: 45%;
-  height: 100px;
-  object-fit: cover;
-  margin: 4px;
+  width: 100%;
+  /* height:100px;
+  object-fit: cover; */
+  margin: 16px 4px;
   cursor: pointer;
+  border: 2px solid #687777;
+  border-radius: 4px;
 }
 @media (max-width: 880px) {
   .realisations-dialog-bottom-photos img {
@@ -682,6 +745,9 @@
 .experiences-ref ul {
   color: #F0EFEA;
 }
+.experiences-ref ul a {
+  text-decoration: underline;
+}
 
 .card-experience {
   background-color: #F0EFEA;
@@ -692,6 +758,8 @@
   border-radius: 8px;
   filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.15));
   margin: 32px auto;
+  display: flex;
+  flex-direction: column;
 }
 .card-experience-top {
   text-align: center;
@@ -762,15 +830,33 @@
   color: #687777;
   font-size: 14px;
 }
+.card-experience-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
 .card-experience-bottom-infos {
   width: calc(100% - 16px);
-  margin: 16px auto;
+  margin: auto;
   border-top: 1px solid #2B9E9C;
   padding: 16px;
 }
 .card-experience-bottom-infos p {
   color: #394848;
   text-align: justify;
+}
+.card-experience-bottom-softs {
+  color: #687777;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+.card-experience-bottom-softs p {
+  display: flex;
+  align-items: center;
+}
+.card-experience-bottom-softs p span {
+  margin-right: 8px;
 }
 
 .diplomes {
@@ -857,6 +943,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: justify;
 }
 .apropos-top-right-links {
   display: flex;
@@ -880,6 +967,7 @@
 }
 .apropos-middle {
   margin-top: 16px;
+  text-align: justify;
 }
 
 .contacts {

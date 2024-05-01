@@ -2,6 +2,24 @@
 @import "scss-config"; // import primary colors
 
 .top-nav{
+
+    &-left{
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        a{
+            border:none !important;
+        }
+     }
+   
+     &-right{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        }
+        
     background-color: $swift-lime-1;
    /*  position: sticky;
     top:0px;
@@ -9,7 +27,7 @@
     max-height:60px;
     display:flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding:16px;
     border-bottom: 1px solid $swift-coal-1;

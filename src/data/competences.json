@@ -21,55 +21,6 @@
     },
     {
         "id": 2,
-        "titre": "Gestion de projet et outils de développeurs",
-        "rating": 3,
-        "details": [
-            "Suivre le déroulement du projet grâce à un outil de gestion de projet",
-            "Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
-            "Découper une fonctionnalités en tâches pour préparer le développement",
-            "Présenter la solution technique",
-            "Mettre en place une méthode de veille technologique",
-            "Versionner son projet avec Git et Github",
-            "Installer un environnement de développement front-end",
-            "Outils : wakelet, Miro, Kaban, Jira, Trello",
-            "Tableaux de bords : Tableurs",
-            "Outils de présentation / partage : Google Slides, Powerpoint"
-        ],
-        "infos": "",
-        "realisations_id": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11
-        ]
-    },
-    {
-        "id": 3,
-        "titre": "Optimisation et debug",
-        "rating": 3,
-        "details": [
-            "Optimiser les performances d’un site web",
-            "Débugger un site web grâce aux Chrome DevTools",
-            "Rédiger un cahier de recette pour tester un site",
-            "Optimisation SEO",
-            "Référencement local + Rich snippets"
-        ],
-        "infos": "",
-        "realisations_id": [
-            1,
-            2,
-            8
-        ]
-    },
-    {
-        "id": 4,
         "titre": "Développement web avec JavaScript",
         "rating": 5,
         "details": [
@@ -91,34 +42,16 @@
         ]
     },
     {
-        "id": 5,
-        "titre": "Création d'Algorithmes",
-        "rating": 4,
-        "details": [
-            "Analyse du problème",
-            "Créer raisonnement logique pour apporter solution"
-        ],
-        "infos": "",
-        "realisations_id": [
-            1,
-            2,
-            4,
-            5,
-            6,
-            8
-        ]
-    },
-    {
-        "id": 6,
-        "titre": "React",
+        "id": 3,
+        "titre": "React.js",
         "rating": 4,
         "details": [
             "Configurer la navigation entre les pages de l'application avec React Router",
             "Initialiser une application avec Create React App",
             "Développer des éléments de l'interface d'un site web grâce à des composants React",
             "Gestion des states avec Redux",
-            "prop types",
-            "Requêtes API avec la bibliothèque AXIOS",
+            "Utilisation de Prop types",
+            "Requêtes fetch avec la bibliothèque AXIOS",
             "Utilisation de la bibliothèque MUI (composants d'interface)",
             "Gestion des dates avec DayJs"
         ],
@@ -126,11 +59,12 @@
         "realisations_id": [
             1,
             2,
-            5
+            5,
+            12
         ]
     },
     {
-        "id": 7,
+        "id": 4,
         "titre": "Développement back-end avec NodeJS",
         "rating": 4,
         "details": [
@@ -152,25 +86,7 @@
         ]
     },
     {
-        "id": 8,
-        "titre": "Publication d'un site web",
-        "rating": 3,
-        "details": [
-            "Déployer un site statique en ligne",
-            "Déploiement application SPA sur Google Firebase",
-            "Déploiement continu microservice sur Google Cloud Run"
-        ],
-        "infos": "",
-        "realisations_id": [
-            1,
-            2,
-            9,
-            10,
-            11
-        ]
-    },
-    {
-        "id": 9,
+        "id": 5,
         "titre": "Bases de données",
         "rating": 3,
         "details": [
@@ -184,6 +100,93 @@
             1,
             2,
             6
+        ]
+    },
+    {
+        "id": 6,
+        "titre": "Optimisation et debug",
+        "rating": 3,
+        "details": [
+            "Optimiser les performances d’un site web",
+            "Débugger un site web grâce aux Chrome DevTools",
+            "Rédiger un cahier de recette pour tester un site",
+            "Optimisation SEO",
+            "Référencement local + balises Schema.org"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2,
+            8
+        ]
+    },
+    {
+        "id": 7,
+        "titre": "Gestion de projet et outils de développeurs",
+        "rating": 3,
+        "details": [
+            "Suivre le déroulement du projet grâce à un outil de gestion de projet",
+            "Rédiger les spécifications techniques d'un projet web à partir de besoins fonctionnels",
+            "Découper une fonctionnalités en tâches pour préparer le développement",
+            "Présenter la solution technique",
+            "Mettre en place une méthode de veille technologique",
+            "Versionner son projet avec Git et Github",
+            "Outils : wakelet, Miro, Kaban, Jira, Trello",
+            "Tableaux de bords : Tableurs",
+            "Outils de présentation / partage : Google Slides, Powerpoint"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "id": 8,
+        "titre": "Création d'Algorithmes",
+        "rating": 4,
+        "details": [
+            "Analyse du problème",
+            "Créer un raisonnement logique pour apporter une solution",
+            "Traduire ce raisonnement en suite d'instructions logiques"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
+        ]
+    },
+    {
+        "id": 9,
+        "titre": "Publication d'un site web",
+        "rating": 3,
+        "details": [
+            "Déployer un site statique en ligne",
+            "Déploiement application SPA sur Google Firebase",
+            "Déploiement continu microservice sur Google Cloud Run",
+            "Services AWS, App runner et RDS",
+            "Déploiement de container avec Docker"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2,
+            9,
+            10,
+            11
         ]
     }
 ]

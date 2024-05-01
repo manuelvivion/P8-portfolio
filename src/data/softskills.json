@@ -39,12 +39,12 @@
         "id": 3,
         "titre": "Travail en équipe",
         "details": [
-            "Bicy'cool ; Chef d'atelier + équipe réduite",
+            "Expérience Bicy'cool : Chef d'atelier + équipe réduite",
             "Ecoute/collaboration interne, transversale : avec autres services",
-            "Écoute/collaboration interne, verticale :(hierarchie) suivre et rendre compte",
-            "Tournages snowboard, avec Athlètes, photographes...",
-            "équipe média startup Hexo+ (grenoble)",
-            "Startup/TPE/PME/GE"
+            "Écoute/collaboration interne, verticale :(hiérarchie) suivre et rendre compte",
+            "Tournages snowboard : collaboration étroite avec athlètes, photographes...",
+            "Equipe média dans la startup Hexo+ (Grenoble)",
+            "Divers environnements : Startup/TPE/PME/GE"
         ],
         "infos": "",
         "realisations_id": [],
@@ -59,9 +59,9 @@
         "id": 4,
         "titre": "Rigueur",
         "details": [
-            "Formation initiale informatique : bons réflexes",
-            "Travail avec des athlètes de haut niveau",
-            "Chef d'atelier : méthode / organisation"
+            "Formation initiale informatique : bonne base pour les bons réflexes",
+            "Travail avec des athlètes de haut niveau : Exigence",
+            "Chef d'atelier : méthode / organisation / plannification"
         ],
         "infos": "",
         "realisations_id": [],
@@ -87,7 +87,9 @@
         "details": [
             "Itérations / incrémentations",
             "Sprints",
-            "pratiquée dans la startup Hexo+"
+            "Pratiquée en production audio-visuelle",
+            "Pratiquée dans la startup Hexo+",
+            "Pratiquée pendant la formation OpenClassrooms"
         ],
         "infos": "",
         "realisations_id": [
@@ -108,7 +110,8 @@
         "details": [
             "Missions freelances",
             "Respect des deadlines",
-            "analyse / cahier des charges"
+            "Analyse / cahier des charges",
+            "Chargé du S.A.V. chez Bicy'Cool"
         ],
         "infos": "",
         "realisations_id": [
@@ -121,6 +124,24 @@
             2,
             3,
             5
+        ]
+    },
+    {
+        "id": 8,
+        "titre": "Créativité",
+        "details": [
+            "Force de proposition",
+            "Pratiquée tout au long de ma carrière"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            8
         ]
     }
 ]

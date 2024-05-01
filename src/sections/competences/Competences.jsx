@@ -32,6 +32,12 @@ import LayersIcon from '@mui/icons-material/Layers';
 import CloseIcon from '@mui/icons-material/Close';
 import EastIcon from '@mui/icons-material/East';
 
+import Modal from '@mui/material/Modal';
+
+//created components
+import ModalRealisation from '../../components/modalrealisation/ModalRealisation.jsx'
+
+
 const iconesList = [<AutoStoriesIcon />, <LayersIcon />, <Diversity3Icon />, <CropSquareIcon />, <RemoveRedEyeIcon />, <SignalCellularAltIcon />, <HearingIcon />]
 
 const Accordion = styled((props) => (
@@ -72,9 +78,22 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 function Competences() {
 
+    //// modal management 
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+    //// end of Modal MGMT
+
     const [expanded, setExpanded] = useState(0);
     const [skillId, setSkillId] = useState(0);
     const [panelOpen, setPanelOpen] = useState(false);
+    const [real, setReal] = useState({});
 
     const handleChange = (panel) => (event, newExpanded) => {
         setExpanded(newExpanded ? panel : false);
@@ -98,7 +117,8 @@ function Competences() {
     }
 
     function handleOpenReal(id) {
-
+        setReal(listRealisations.filter((real) => real.id_realisation === id)[0]);
+        handleClickOpen();
     }
 
     return (
@@ -158,7 +178,7 @@ function Competences() {
                     <div className="competences-soft-top">
                         <h3>Soft Skills</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu  elementum nunc. Sed sit amet nisi dignissim, vulputate sapien ac,  viverra velit. Ut pretium quis orci ac malesuada. Quisque vel metus sit  amet quam lobortis egestas non sit amet est. Sed non lectus nec lectus  lacinia mollis vel non velit. Suspendisse venenatis dui id massa  molestie scelerisque. Nulla
+                            Au delà des compétences techniques directement nécessaires à un développeur web, toutes mes expériences professionnelles passées m'ont permis de développer et renforcer tout un bagage de compétences dites transversales. Ces soft skills correspondent à celles qu'on attend d'un développeur et m'aident à mener à bien mes différents projets.
                         </p>
                         <div className="competences-soft-top-list">
                             {listSoftSkills.map((skill, index) => (
@@ -228,6 +248,16 @@ function Competences() {
                 </div>
                 <div className="aeration-basse"></div>
             </div>
+
+            <Modal
+                className="realisations-dialog"
+                open={open}
+                onClose={handleClose}
+            >
+                <>
+                    <ModalRealisation real={real} handleClose={handleClose} />
+                </>
+            </Modal>
         </section>
     );
 }
