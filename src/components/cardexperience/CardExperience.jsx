@@ -5,22 +5,22 @@ import TaskAltIcon from '@mui/icons-material/TaskAlt';
 //data
 import softSkills from '../../data/softskills.json'
 
-function CardExperience({ exp }) {
+function CardExperience({ exp }) { //exp si JSON object from JSON file
 
     let mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre"]
 
-    function getDebut() {
+    function getDebut() { // return start date as string (displayed in jsx)
         return mois[exp.start_month - 1] + ` ${exp.start_year}`;
     }
 
-    function getFin() {
+    function getFin() { //return end date as string (displayed in jsx)
 
         let moi = exp.end_month === 0 ? "Aujourd'hui" : mois[exp.end_month - 1];
         let an = exp.end_month === 0 ? "" : ` ${exp.end_year}`;
         return moi + an;
     }
 
-    function getSofts(list) {
+    function getSofts(list) { // return a list of soft skills, as string for <p> in jsx
         let infos = "";
         list.forEach((soft, index) => {
             infos += index === 0 ? "" : " , "

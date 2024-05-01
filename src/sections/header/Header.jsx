@@ -8,6 +8,11 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Header() {
 
+    //// Popover MGMT
+    //// popover is opend from burger button
+    //// popover show stack of links for every part of the portfolio
+    //// burger button is the only one displayed in nav bar for mobile screens
+
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
@@ -20,6 +25,7 @@ function Header() {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
+    /// end of Popover MGMT
 
     return (
 

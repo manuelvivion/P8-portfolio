@@ -3,8 +3,11 @@
 
 
 
-function SectionTitle({ title, fontColor, borderColor }) {
-
+function SectionTitle({ title, fontColor, borderColor }) { // For every section (compétences, experiences...)
+    //prop : title : the text of the title
+    // font color : one of the colors in scss-config.scss
+    // border color : one of the colors in scss-config.scss
+    // colors are added to className (already set in style.scss SCSS file)
 
     return (
 

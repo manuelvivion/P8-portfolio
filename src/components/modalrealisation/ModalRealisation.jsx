@@ -1,59 +1,36 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import * as React from 'react';
 
 //MUI :
 import Button from '@mui/material/Button';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
-import Modal from '@mui/material/Modal';
-import Dialog from '@mui/material/Dialog';
-import Slide from '@mui/material/Slide';
+
 
 //data
 import categories from '../../data/categories.json'
-import tags from '../../data/tags.json'
 
 
 
 
 
 function ModalRealisation({ real, handleClose }) {
+    // props : real is JSON object from data/JsON file
+    // props : handleClose is function from parent to trigger modal closing
 
-    const [showPhoto, setShowPhoto] = useState(false);
-    //const [imageFocusUrl, setImageFocusUrl] = useState("");
+    const [showPhoto, setShowPhoto] = useState(false); // state : show list of 4 photos or hide them
 
-    function getCategorie(id) {
+    function getCategorie(id) { // return label of the categorie, as string
         return categories.find((cat) => cat.id === id).label;
     }
 
-    /* function zoomPhoto(url) {
-        setImageFocusUrl(url);
-        //setImageFocusUrl("../../images/" + real.url_cover);
-        setShowPhoto(true);
-    } */
-
-    function getTags(idList) {
-        let infos = "";
-        idList.forEach((id, index) => {
-            infos += index > 0 ? " / " : "";
-            infos += tags.find((tag) => tag.id === id).tag;
-        })
-        return infos;
-    }
 
     return (
 
         <article className="realisations-dialog-content">
-            {
-                /* showPhoto === true ?
-                    <div className="realisations-dialog-content-focusimage" onClick={_ => setShowPhoto(false)}>
-                        <img src={require("../../images/" + imageFocusUrl)} alt="photo en détail" />
-                    </div>
-                    : null */
-            }
+
 
             <div className="realisations-dialog-top">
                 <div className="realisations-dialog-top-fondu"></div>
@@ -70,7 +47,7 @@ function ModalRealisation({ real, handleClose }) {
                         <p className="realisations-dialog-middle-infos-1">{real.infos}</p>
                         <p>{real.infos2}</p>
                     </div>
-                    {real.id_categorie < 3 ?
+                    {real.id_categorie < 3 ? // we show defi and solution only for categorie 1 (SPA) and 2 (Projets OpenClassrooms)
                         <div>
                             <p><span>Défi rencontré :</span> {real.defi}</p>
                             <p><span>Solution apportée : </span>{real.solution}</p>
@@ -87,12 +64,11 @@ function ModalRealisation({ real, handleClose }) {
             <div className="realisations-dialog-bottom">
                 <Button
                     className="realisations-dialog-bottom-expand"
-                    //fullWidth
                     onClick={_ => setShowPhoto(!showPhoto)}
                 >
                     <CameraAltIcon /><ArrowDropDownIcon /></Button>
 
-                {showPhoto === true ?
+                {showPhoto === true ? // Showing photos only if button is clicked (state as true)
                     <div className="realisations-dialog-bottom-photos">
                         <img src={require("../../images/" + real.url_images[0])} alt="screenshot de code" />
                         <img src={require("../../images/" + real.url_images[1])} alt="screenshot de code" />

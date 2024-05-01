@@ -1,14 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import * as React from 'react';
 
 //MUI :
 import Button from '@mui/material/Button';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import CloseIcon from '@mui/icons-material/Close';
 
 import Modal from '@mui/material/Modal';
-import Dialog from '@mui/material/Dialog';
-import Slide from '@mui/material/Slide';
 
 //data
 import categories from '../../data/categories.json'
@@ -19,9 +16,9 @@ import ModalRealisation from '../modalrealisation/ModalRealisation.jsx'
 
 
 
-function CardRealisations({ real }) {
+function CardRealisations({ real }) { //real is a JSON object, from the list of realisation (JSON file)
 
-
+    //// modal MGMT
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -31,15 +28,20 @@ function CardRealisations({ real }) {
     const handleClose = () => {
         setOpen(false);
     };
+    //// End of modal MGMT
 
-    function getCategorie(id) {
+
+
+    function getCategorie(id) { // return the label of categorie, as string
+        // search in the list of categories, JSON file imported as array (line 11)
         return categories.find((cat) => cat.id === id).label;
     }
 
-    function getTags(idList) {
+    function getTags(idList) { // return list of tags,as inline string
         let infos = "";
         idList.forEach((id, index) => {
             infos += index > 0 ? " / " : "";
+            // search in the list of tags, JSON file imported as array (line 12)
             infos += tags.find((tag) => tag.id === id).tag;
         })
         return infos;

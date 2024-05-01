@@ -13,16 +13,17 @@ import Button from '@mui/material/Button';
 import categories from '../../data/categories.json'
 import listRealisations from '../../data/realisations.json'
 
-function Realisations() {
+function Realisations() { // show the list of Cards "realisation" depending on the filter chosen
 
 
-    const [idCat, setIdCat] = useState(0);
-    const [listLimit, setListLimit] = useState(3);
+    const [idCat, setIdCat] = useState(0); //state for current categorie filter : 0 is "no filter"
+    const [listLimit, setListLimit] = useState(3); // we limit the number of shown cards , to keep it "light" (3 is array index -> 4 cards shown)
 
-    useEffect(() => { //
-        setListLimit(3);
+    useEffect(() => { // every time the filter is changed
+        setListLimit(3); // we reset the limit to 3 (3 is the index of the array, so 4 cards are shown)
     }, [idCat]);
 
+    // set a new filtered list of realisation to show
     let filteredList = idCat > 0 ? listRealisations.filter((real) => real.id_categorie === idCat) : listRealisations;
 
     return (

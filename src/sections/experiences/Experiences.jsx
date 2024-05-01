@@ -10,8 +10,6 @@ import "react-multi-carousel/lib/styles.css";
 //MUI :
 
 //data :
-import categories from '../../data/categories.json'
-import listRealisations from '../../data/realisations.json'
 import listExperiences from '../../data/experiences.json'
 
 function Experiences() {
@@ -31,7 +29,9 @@ function Experiences() {
             </div>
             <div className="experiences-content">
                 <div className="experiences-content-caroussel">
-                    <Carousel
+                    <Carousel // CAroussel is component from external librairy
+                        // https://www.npmjs.com/package/react-multi-carousel
+                        // exemples : https://react-multi-carousel.surge.sh/?selectedKind=Carousel&selectedStory=With%20infinite%20mode&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook%2Factions%2Factions-panel
                         additionalTransfrom={0}
                         arrows
                         autoPlaySpeed={3000}

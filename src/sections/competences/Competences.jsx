@@ -37,6 +37,7 @@ import Modal from '@mui/material/Modal';
 //created components
 import ModalRealisation from '../../components/modalrealisation/ModalRealisation.jsx'
 
+//// --- Start of Accordeons config 
 
 const iconesList = [<AutoStoriesIcon />, <LayersIcon />, <Diversity3Icon />, <CropSquareIcon />, <RemoveRedEyeIcon />, <SignalCellularAltIcon />, <HearingIcon />]
 
@@ -76,6 +77,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
+//// --- end of accordion config
+
 function Competences() {
 
     //// modal management 
@@ -90,34 +93,43 @@ function Competences() {
     };
     //// end of Modal MGMT
 
+
     const [expanded, setExpanded] = useState(0);
     const [skillId, setSkillId] = useState(0);
     const [panelOpen, setPanelOpen] = useState(false);
     const [real, setReal] = useState({});
 
-    const handleChange = (panel) => (event, newExpanded) => {
+    const handleChange = (panel) => (event, newExpanded) => { //manage the change of accordion
         setExpanded(newExpanded ? panel : false);
         setPanelOpen(false);
     };
 
-    function getReal(id) {
+    function getReal(id) { // search Realisation matching with the opened Competences (by realisation Id)
+        // this function is used to fill infos in every realisations lines matching a competences
+        // prop : id is realisation_id listed in "realisation_id" field of Competence JSON object
+
+        //first find the realisation JSON object
         let realisation = listRealisations.find((real) => real.id_realisation === id);
+        //then find the categorie of this Realisation
         let categorie = categories.find((cat) => cat.id === realisation.id_categorie);
+        // return an object with 2 fields : label of the realisation, label, of the catégorie
         return ({ titre: realisation.titre, categorie: categorie.label })
     }
 
-    function getExp(id) {
+    function getExp(id) { // return the full Experience JSON Object
+        // prop : id . id of the experience json object. id is listed in the "experience_id" field of competence JSON Object
         return listExperiences.find((exp) => exp.id_experience === id);
     }
 
-    function getSkill() {
+    function getSkill() { // return SoftSkill JSON object for the "Soft Skills" part, at the bottom of this section
         let skill = listSoftSkills.find((skill) => skill.id === skillId);
-
         return skill;
     }
 
-    function handleOpenReal(id) {
+    function handleOpenReal(id) { // function called to open modal (focus on realisation)
+        // tell the modal which realisation to display
         setReal(listRealisations.filter((real) => real.id_realisation === id)[0]);
+        // open the modal
         handleClickOpen();
     }
 
@@ -129,14 +141,14 @@ function Competences() {
                 <div className="competences-content">
                     <div className="competences-content-main">
                         <div>
-                            {listCompetences.map((comp) => (
+                            {listCompetences.map((comp) => ( // for every compétences listed in JSON file
                                 <Accordion expanded={expanded === comp.id} onChange={handleChange(comp.id)} key={comp.id}>
                                     <AccordionSummary >
                                         <div className="competences-content-item-header">
                                             <h3>{comp.titre}</h3>
                                             <Rating value={comp.rating} size="small" readOnly />
                                         </div>
-                                        {/* <Typography>{comp.titre} </Typography> */}
+
                                     </AccordionSummary>
                                     <AccordionDetails>
                                         <ul>
@@ -173,6 +185,10 @@ function Competences() {
 
 
             </div>
+            {/* //// End of the accordeon zone */}
+
+
+            {/* //// Soft skills zone :  */}
             <div className="competences-soft" id="softskills">
                 <div className="section-container">
                     <div className="competences-soft-top">

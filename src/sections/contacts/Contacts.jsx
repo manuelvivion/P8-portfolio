@@ -7,6 +7,7 @@ import SectionTitle from '../../components/sectiontitle/SectionTitle.jsx'
 
 function Contacts() {
 
+    // ItemScop, ItemType, ItemProp : Schema.org Rich Snippets
     return (
 
         <section className="contacts" id="contacts" itemScope itemType="https://schema.org/Person">
