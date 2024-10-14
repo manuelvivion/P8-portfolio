@@ -32,7 +32,7 @@ function Header() {
         <nav className="top-nav">
             <div className="top-nav-left">
                 <a href="https://github.com/manuelvivion" target="_blank"><GitHubIcon /></a>
-                <a href="https://www.linkedin.com/in/manuel-vivion-30544b83" target="_blank"><LinkedInIcon /></a>
+                <a href="https://www.linkedin.com/in/manuelvivion/" target="_blank"><LinkedInIcon /></a>
             </div>
 
             <div className="top-nav-right">

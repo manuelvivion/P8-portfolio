@@ -98,6 +98,14 @@ function Experiences() {
             </div>
 
             <div className="experiences-ref" id="references">
+
+                <h3>Recommandations ( lehibou.com )</h3>
+                <div className="experiences-ref-reco">
+                    <img src={require('../../images/recommandations/reco_hibou_georges.png')} alt="recommandation du site leHibou.com" />
+                    <img src={require('../../images/recommandations/reco_hibou_yann.png')} alt="recommandation du site leHibou.com" />
+                    <img src={require('../../images/recommandations/reco_hibou_matt.png')} alt="recommandation du site leHibou.com" />
+                </div>
+
                 <h3>Clients</h3>
                 <div className="experiences-ref-logos">
                     <img src={require('../../images/logos/clients/groupama.png')} alt="logo client groupama" />

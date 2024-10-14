@@ -143,5 +143,37 @@
             6,
             8
         ]
+    },
+    {
+        "id": 9,
+        "titre": "Autonomie",
+        "details": [
+            "Travaux freelance"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": [
+            1,
+            2,
+            6,
+            8
+        ]
+    },
+    {
+        "id": 10,
+        "titre": "Anglais B2",
+        "details": [
+            "Clients et collaborateurs anglophones",
+            "Documentations anglaises",
+            "Commentaires de code en anglais"
+        ],
+        "infos": "",
+        "realisations_id": [],
+        "experiences_id": [
+            2,
+            3,
+            4,
+            6
+        ]
     }
 ]

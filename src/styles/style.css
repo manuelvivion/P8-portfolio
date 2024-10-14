@@ -742,6 +742,25 @@
     width: 80px;
   }
 }
+.experiences-ref-reco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+.experiences-ref-reco img {
+  width: 60%;
+  max-width: 500px;
+}
+@media (max-width: 880px) {
+  .experiences-ref-reco img {
+    width: 80%;
+    max-width: none;
+  }
+}
 .experiences-ref ul {
   color: #F0EFEA;
 }

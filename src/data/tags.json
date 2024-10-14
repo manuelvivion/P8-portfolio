@@ -58,5 +58,21 @@
     {
         "id": 15,
         "tag": "Deboggage"
+    },
+    {
+        "id": 16,
+        "tag": "Angular"
+    },
+    {
+        "id": 17,
+        "tag": "Typescript"
+    },
+    {
+        "id": 18,
+        "tag": "Observables"
+    },
+    {
+        "id": 19,
+        "tag": "Programmation objet"
     }
 ]

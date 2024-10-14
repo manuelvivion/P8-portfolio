@@ -54,6 +54,25 @@
                 
             }
         }
+        &-reco{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: 100%;
+            padding:32px;
+            margin-bottom:32px;
+            img{
+                width:60%;
+                max-width:500px;
+                @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                    width:80%;
+                    max-width:none;
+                }
+            }
+           
+
+        }
         ul{
             color:$swift-lime-1;
             a{

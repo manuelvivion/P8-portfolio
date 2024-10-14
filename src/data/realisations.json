@@ -1,5 +1,30 @@
 [
     {
+        "id_realisation": 13,
+        "titre": "LowCase",
+        "id_categorie": 1,
+        "url_cover": "realisations/13/screenshot_4.jpg",
+        "url_images": [
+            "realisations/13/screenshot_1.jpg",
+            "realisations/13/screenshot_2.jpg",
+            "realisations/13/screenshot_3.jpg",
+            "realisations/13/screenshot_5.jpg"
+        ],
+        "description": "Back Office pour la vente de matériel d'occasion",
+        "infos": "Création d'annonces de vente de matériel, incluant toutes les infos nécessaires.",
+        "infos2": "Choix d'une catégorie, ajout/suppression de photos, ajout de rubriques propres à chaque type d'articles.",
+        "defi": "Uniformiser le format des annonces malgré des articles très hétérogènes.",
+        "solution": "Création d'une base de données des caractéristiques partagées par tous les articles (taille, état...).",
+        "lien_github": "",
+        "lien": "",
+        "tags_id": [
+            16,
+            17,
+            19,
+            2
+        ]
+    },
+    {
         "id_realisation": 1,
         "titre": "Nestor Bikes",
         "id_categorie": 1,

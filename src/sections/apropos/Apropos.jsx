@@ -25,8 +25,8 @@ function Apropos() {
                     <div className="apropos-top-right">
                         <p>J'ai suivi une formation initiale universitaire en informatique (D.U.T.). Pour compléter et rester à jour, J'ai suivi la formation 'développeur web' chez OpenClassrooms. Cette formation en ligne, professionnalisante et diplômante (eq. bac+2) renforce mon profil pour mener à bien des projets de développement modernes. </p>
                         <div className="apropos-top-right-links">
-                            <a href="https://www.linkedin.com/in/manuel-vivion-30544b83" target="_blank"><PictureAsPdfIcon /> <span>Mon C.V. en .pdf</span></a>
-                            <a href="https://www.linkedin.com/in/manuel-vivion-30544b83" target="_blank"><LinkedInIcon /> <span>Mon compte LinkedIn</span></a>
+                            <a href="https://www.manuelvivion.net/cv/CV_Manuel_VIVION_2024.pdf" target="_blank"><PictureAsPdfIcon /> <span>Mon C.V. en .pdf</span></a>
+                            <a href="https://www.linkedin.com/in/manuelvivion/" target="_blank"><LinkedInIcon /> <span>Mon compte LinkedIn</span></a>
                             <a href="https://github.com/manuelvivion" target="_blank"><GitHubIcon /> <span>Mon compte Github</span></a>
                         </div>
                     </div>

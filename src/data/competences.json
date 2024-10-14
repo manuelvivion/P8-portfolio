@@ -64,6 +64,23 @@
         ]
     },
     {
+        "id": 10,
+        "titre": "Angular",
+        "rating": 3,
+        "details": [
+            "Programmation objet avec Typescript",
+            "Création de modules, services, pipes et directives",
+            "Programmation réactive avec les observables",
+            "Lier les templates HTML à la logique Typescript",
+            "Styles en SCSS",
+            "Utilisation du module http et de la bibliothèque RxJs"
+        ],
+        "infos": "",
+        "realisations_id": [
+            13
+        ]
+    },
+    {
         "id": 4,
         "titre": "Développement back-end avec NodeJS",
         "rating": 4,
@@ -100,6 +117,23 @@
             1,
             2,
             6
+        ]
+    },
+    {
+        "id": 11,
+        "titre": "Programmation Orientée Objet",
+        "rating": 3,
+        "details": [
+            "Utilisation des langages Java et Typescript",
+            "Encapsulation, getters/setters",
+            "Héritage",
+            "Interfaces"
+        ],
+        "infos": "",
+        "realisations_id": [
+            1,
+            2,
+            13
         ]
     },
     {

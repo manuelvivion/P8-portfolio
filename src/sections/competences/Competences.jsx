@@ -28,6 +28,9 @@ import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt';
 import HearingIcon from '@mui/icons-material/Hearing';
 import CropSquareIcon from '@mui/icons-material/CropSquare';
 import LayersIcon from '@mui/icons-material/Layers';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import TranslateIcon from '@mui/icons-material/Translate';
+import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
 
 import CloseIcon from '@mui/icons-material/Close';
 import EastIcon from '@mui/icons-material/East';
@@ -39,7 +42,7 @@ import ModalRealisation from '../../components/modalrealisation/ModalRealisation
 
 //// --- Start of Accordeons config 
 
-const iconesList = [<AutoStoriesIcon />, <LayersIcon />, <Diversity3Icon />, <CropSquareIcon />, <RemoveRedEyeIcon />, <SignalCellularAltIcon />, <HearingIcon />]
+const iconesList = [<AutoStoriesIcon />, <LayersIcon />, <Diversity3Icon />, <CropSquareIcon />, <RemoveRedEyeIcon />, <SignalCellularAltIcon />, <HearingIcon />, <TipsAndUpdatesIcon />, <ArrowRightAltIcon />, <TranslateIcon />]
 
 const Accordion = styled((props) => (
     <MuiAccordion disableGutters elevation={0} square {...props} />
