@@ -149,7 +149,7 @@ function Competences() {
                                     <AccordionSummary >
                                         <div className="competences-content-item-header">
                                             <h3>{comp.titre}</h3>
-                                            <Rating value={comp.rating} size="small" readOnly />
+                                            {/*  <Rating value={comp.rating} size="small" readOnly /> */}
                                         </div>
 
                                     </AccordionSummary>

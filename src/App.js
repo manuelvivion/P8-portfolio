@@ -10,6 +10,7 @@ import Experiences from './sections/experiences/Experiences.jsx'
 import Diplomes from './sections/diplomes/Diplomes.jsx'
 import Apropos from './sections/apropos/Apropos.jsx'
 import Contacts from './sections/contacts/Contacts.jsx'
+import Recommandations from './sections/recommandations/Recommandations';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </header>
       <main>  
         <Intro/>
+        <Recommandations/>
         <Realisations/>
         <Competences/>
         <Experiences/>

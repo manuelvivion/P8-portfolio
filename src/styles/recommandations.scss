@@ -1,0 +1,41 @@
+@import "breakpoint"; // import scss file to get $breakpoint variable (max-width for mobiles)
+@import "scss-config"; // import primary colors
+
+.recommandations{
+    background-color: $swift-lime-1;
+    &-content{
+
+        padding:16px;
+        max-width: 960px;
+        margin: auto;
+        @media (max-width: $breakpoint) { // Responsive  : mobile screen
+            padding:16px;
+        }
+        p{
+            text-align: right;
+            span{
+                font-weight: 300;
+            }
+        }
+        blockquote{
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 4px;
+            padding:16px;
+            margin:4px;
+
+            //font-family: "Patrick Hand", cursive;
+            //font-family: "Indie Flower", serif;
+            font-family: "Handlee", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            letter-spacing: 0.03em;
+            text-align: justify;
+            white-space: pre-line;
+            @media (max-width: $breakpoint) { // Responsive  : mobile screen
+                font-size: 14px;
+            }
+
+        }
+    }
+}

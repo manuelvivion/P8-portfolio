@@ -1025,6 +1025,44 @@
   margin: 8px;
 }
 
+.recommandations {
+  background-color: #F0EFEA;
+}
+.recommandations-content {
+  padding: 16px;
+  max-width: 960px;
+  margin: auto;
+}
+@media (max-width: 880px) {
+  .recommandations-content {
+    padding: 16px;
+  }
+}
+.recommandations-content p {
+  text-align: right;
+}
+.recommandations-content p span {
+  font-weight: 300;
+}
+.recommandations-content blockquote {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 4px;
+  font-family: "Handlee", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-align: justify;
+  white-space: pre-line;
+}
+@media (max-width: 880px) {
+  .recommandations-content blockquote {
+    font-size: 14px;
+  }
+}
+
 /****** General ***********/
 * {
   font-family: "Rajdhani", sans-serif;
